@@ -1,0 +1,263 @@
+div h1 {
+     background-color:none;
+     margin:30px;
+     border-style: groove;
+     width:950px;height: 250px;
+     margin-left: 0px;
+    text-align: center;
+    border-color: #464444;  
+}
+
+
+
+/* General Body Styles (adjust as needed for overall theme) */
+.body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Example background for contrast, adjust to your theme */
+    background-color: #f4f4f4; 
+    color: #333;
+}
+/* Header Styling */
+header {
+    display: grid; /* Use CSS Grid for header layout */
+    grid-template-columns: auto 1fr auto; /* logo | space | nav */
+    align-items: center; /* Vertically align items */
+    padding: 0rem;
+    background-color: #c6d0da; /* Example header background color */
+    color: rgb(39, 37, 37);
+    gap: 80px; /* Space between grid items */
+    border-style: solid;
+    width:950px;
+    
+    
+}
+
+
+header img {
+    height: 80px; /* Adjust logo size */
+    width: auto;
+    /* For consistent logo sizing across pages */
+}
+
+.header img {
+    text-align: center; /* Center the title in its grid cell */
+    margin: 0px;
+    padding: 0px;
+    font-size: 2em; /* Adjust title size */
+    
+    
+}
+/* a second options*/
+header nav {
+    /* No display property here for nav itself when it's a grid item. */
+    /* Flexbox will be applied to the ul inside nav. */
+    justify-self: end; /* Push nav to the right in the grid */
+    
+    display: 1 100px/auto auto auto auto;
+    margin-right: 450px;
+    display: inline;
+    display: flex;
+    height: 60px;
+    
+    
+
+}
+
+
+header nav ul {
+    color: lab(53.02% 48.27 -72.33 / 0.94);
+    text-decoration: none;
+    padding: 0.1rem 1rem;
+    transition: background-color 0.3s ease;
+    width: 90px;
+    font-style:oblique;
+    white-space: nowrap; /* Prevent text wrapping */
+    
+
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Navigation List Styling (using Flexbox) */
+.header nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use CSS Flex for horizontal nav links */
+    justify-content: flex-end; /* Align links to the end (right) */
+    gap: 15px; /* Space between nav items */
+}
+
+ 
+
+/* Main Content Styling (general for about.html) */
+
+
+/* main div */
+section{
+     margin-top:200PX ;
+    background-color: #fff;
+    height: 500PX;
+    display: inline;
+    display: grid;
+    border-style: solid;
+    width: 1090px;
+    height: 470px;
+
+
+
+}
+
+.p1 {
+    padding: 10px; 
+    margin-left: -30px; 
+    margin-top: -10px; 
+    text-align: end; 
+    width: 300px;
+    text-box:inherit; 
+}
+
+.p2{
+    margin-left: 10px; 
+    margin-top: -380px; 
+    text-align: start; 
+    width: 300px
+}
+.section{
+    display: grid; 
+    text-align:right; 
+    font-size: 19px; background-color:none;
+    margin:-230px;
+    border-style: groove;
+    margin-left: 0px;text-align: center;
+    border-color: #333; 
+    width: 850px;
+     height: 180px; 
+    margin-left: 30px;
+}
+
+/* History Section Styling */
+.history-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 50px; /* Space between columns */
+    align-items: start; /* Align content to the top */
+    margin-bottom: 3rem; /* Space after history section */
+    font-size: 16px;
+}
+
+.history-section h2 {
+    grid-column: 1 / -1; /* Span across both columns */
+    text-align: center;
+    font-size: 1.5em;
+    color: #0056b3; /* Darker blue for heading */
+    margin-bottom: 1.5rem;
+    
+}
+
+.history-section img {
+    width: 100px; /* Make image responsive within its column */
+    height: auto;
+    display: block; /* Remove extra space below image */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.history-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: justify; /* Justify text for clean block */
+}
+
+/* Adventures Section Styling (CSS Layout Method - Grid or Flex) */
+.adventures-section {
+    margin-bottom: 3rem;
+    height: 400px;
+}
+
+.adventures-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #0056b3;
+    margin-bottom: 1rem;
+    
+}
+
+.adventure-gallery {
+    display: grid; /* Use grid for adventure images */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between images */
+    justify-content: center; /* Center items if they don't fill the row */
+    
+}
+
+.adventure-gallery figure {
+    margin: 0; /* Remove default figure margin */
+    text-align: center;
+    background-color: #fff; /* White background for each figure */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox to center content vertically/horizontally within figure */
+    flex-direction: column;
+    justify-content: space-between; /* Push image up, caption down */
+}
+
+adventure-gallery img {
+    max-width: 100%; /* Ensure image fits within figure */
+    height: auto;
+    border-radius: 5px; /* Slightly rounded image corners */
+    margin-bottom: 0.5rem; /* Space between image and caption */
+}
+
+adventure-gallery figcaption {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex; /* Use flexbox for footer content */
+    justify-content: space-between; /* Puts copyright left, social links right */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+footer p {
+    margin: 0;
+    flex-grow: 1; /* Allow copyright to grow */
+    text-align: left; /* Keep copyright text left */
+}
+
+footer .sociallinks {
+    display: flex; /* Use flexbox for social links */
+    gap: 15px; /* Space between social icons */
+    justify-content: flex-end; /* Align social links to the right */
+    margin-left: auto; /* Push social links to the right if space allows */
+}
+
+footer .sociallinks img {
+    height: 30px; /* Adjust social icon size */
+    width: auto;
+    
+    
+    filter: invert(100%); /* Make icons white if they are black on dark background */
+} 
+
+.nav{
+    display:flow-root;
+    margin: 20px;
+}
+

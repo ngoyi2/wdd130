@@ -1,0 +1,242 @@
+/* --- Common Styles (assuming these already exist from other pages) --- */
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img.logo {
+    height: 80px; /* Adjust as needed */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #555; /* Example */
+}
+*/
+
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    background-color: #555;
+    
+}
+
+nav ul li a:hover {
+    background-color: #000;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+footer p, footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0.5rem;
+}
+
+footer .social-media img {
+    height: 30px; /* Adjust as needed */
+    margin: 0 5px;
+}
+*/
+
+
+/* --- Specific Styles for contact.html --- */
+
+.contact-hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Light background for hero section */
+    margin-bottom: 30px;
+}
+
+.contact-hero h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.contact-hero p {
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.employee-profiles {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.employee-profiles h2 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for profiles */
+    gap: 30px; /* Space between cards */
+    justify-content: center; /* Center items if they don't fill the row */
+}
+
+.employee-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 20px; /* Space below content */
+}
+
+.employee-card img {
+    width: 100%;
+    height: 250px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    display: block;
+    margin-bottom: 15px;
+}
+
+.employee-card figcaption h3 {
+    margin: 10px 0 5px;
+    color: #007bff; /* A primary color for names */
+}
+
+.employee-card figcaption p {
+    color: #555;
+    font-size: 0.95em;
+    margin: 5px 0;
+}
+
+.comment-form-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+}
+
+.comment-form-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.comment-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.comment-form button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Ensure the footer link for wireframe is styled appropriately */
+footer a[href*="wireframe"] {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr; /* Stack profiles on smaller screens */
+    }
+    .employee-card {
+        margin: 0 10px; /* Add some side margin */
+    }
+    .contact-hero h2, .employee-profiles h2, .comment-form-section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero h2, .employee-profiles h2, .comment-form-section h2 {
+        font-size: 1.8em;
+    }
+    .comment-form {
+        padding: 15px;
+    }
+}
+
+

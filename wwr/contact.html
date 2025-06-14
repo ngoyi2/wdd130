@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - White Water Rafting</title>
+    <link rel="stylesheet" href="styles/raffting3.css">
+    </head>
+<body>
+    <header>
+        <a href="index.html" id="logo_link">
+            <img class="logo" src="images/z-splash.png" alt="Rafting Site Logo">
+        </a>
+        <h1>White Water Rafting Adventures</h1>
+    </header>
+
+    <nav class="header nav ul">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="trips.html">Trips</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Get in Touch with Our Team!</h2>
+            <p>Whether you have questions about our trips, want to book an adventure, or just want to say hello, we're here to help.</p>
+        </section>
+
+        <section class="employee-profiles">
+            <h2>Our Team</h2>
+            <div class="profile-grid">
+                
+
+                <figure class="employee-card">
+                    <img src="images/ngoy.jpg" alt=" Ngoy Augustin">
+                    <figcaption>
+                        <h3>Ngoy Augustin</h3>
+                        <p>Owner & Lead Guide</p>
+                        <p>augustin.ngoy@rafting.com</p>
+                    </figcaption>
+                </figure>
+               		<figure class="employee-card">
+                    <img src="images/marlene.jpg" alt="Marlene ngoy">
+                    <figcaption>
+                        <h3>Marlene Ngoy</h3>
+                    		<p>Reservations Manager</p>
+                        <p>marlene.ngoy@rafting.com</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="employee-card">
+                    <img src="images/kanda.jpg" alt="Employee 3 Name">
+                    <figcaption>
+                        <h3>Barthelemy kanda</h3>
+                        <p>Equipment Specialist</p>
+                        <p>kanda.k@rafting.com</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="comment-form-section">
+            <h2>Leave Us a Comment or Question</h2>
+            <form action="/submit_comment" method="post" class="comment-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="user_email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="purpose">Purpose of your message:</label>
+                    <select id="purpose" name="message_purpose">
+                        <option value="general">General Inquiry</option>
+                        <option value="reservation">Reservation Question</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="user_message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 White Water Rafting | Augustin Ngoyi</p>
+        <p><a href="https://maps.app.goo.gl/LrQXDyQ94Hn5GAEw9">Sitemap</a> <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d500548.31837194605!2d27.3379844!3d-11.4413497!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2scd!4v1749337729791!5m2!1sen!2scd" width="100" height="80" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </p>
+
+        <p><a href="https://app.moqups.com/sv6L6K5La5bZcRzjOX2r2Oy5vyoGpaBb/view/page/acaaa9c8c" target="_blank"> Contact Us Wireframe</a></p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="facebook icon">
+            </a>
+            <a href="https://www.whatsupp.com" target="_blank">
+                <img src="images/whatsapp.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.jpg" alt="instagram icon">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
