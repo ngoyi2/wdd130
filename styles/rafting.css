@@ -1,0 +1,393 @@
+/* --- Common Styles (already assumed to be in rafting.css) --- */
+/*
+body { font-family: Arial, sans-serif; ... }
+header { background-color: #333; ... }
+nav { ... }
+main { max-width: 1200px; margin: 0 auto; padding: 20px; }
+footer { ... }
+*/
+
+
+/* --- i used Specific Styles for Home Page (index.html) --- */
+
+/* Hero Section */
+.hero-home {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+#hero-img-container {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    filter: brightness(70%); /* Darkens the image for text readability */
+}
+
+.hero-headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    padding: 20px 30px;
+    border-radius: 8px;
+}
+
+.hero-headline h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-headline p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Call to Action Button (reusable class) */
+.button-cta {
+    display: inline-block;
+    background-color: #007bff; /* Example: A vibrant blue */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.button-cta:hover {
+    background-color: #0056b3;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter h2 {
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.newsletter p {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows inputs to wrap on smaller screens */
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    flex-grow: 1; /* Allows inputs to grow and fill space */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    min-width: 200px; /* Ensure inputs don't get too small */
+}
+
+.newsletter-form .button-submit {
+    background-color: #28a745; /* Example: A green for submit */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form .button-submit:hover {
+    background-color: #218838;
+}
+
+/* Main Content Grid Layout */
+.home-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+    gap: 30px; /* Space between grid items */
+    padding: 20px 0;
+}
+
+.grid-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px; /* Consistent height for images in grid items */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.grid-item h3 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.cta-block {
+    background-color: #e9f7fe; /* Lighter background for the CTA grid item */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.cta-block h3 {
+    color: #007bff;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.cta-block p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+
+/* Responsive adjustments for Home Page */
+@media (max-width: 768px) {
+    .hero-headline h2 {
+        font-size: 2.2em;
+    }
+    .hero-headline p {
+        font-size: 1em;
+    }
+    .hero-home #hero-img-container {
+        height: 400px;
+    }
+    .newsletter-form input {
+        width: 100%; /* Stack inputs on small screens */
+        min-width: unset;
+    }
+    .newsletter-form .button-submit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-headline h2 {
+        font-size: 1.8em;
+    }
+    .hero-headline p {
+        font-size: 0.9em;
+    }
+    .hero-home #hero-img-container {
+        height: 300px;
+    }
+    .newsletter, .home-grid-layout {
+        padding: 20px 10px;
+    }
+    .grid-item {
+        padding: 15px;
+    }
+    .cta-block h3 {
+        font-size: 1.5em;
+    }
+    .cta-block p {
+        font-size: 1em;
+    }
+}
+
+``
+
+
+/*
+body { font-family: Arial, sans-serif; ... }
+header { background-color: #333; ... }
+nav { ... }
+main { max-width: 1200px; margin: 0 auto; padding: 20px; }
+footer { ... }
+.button-cta { ... } /* Reusing this from index.html */
+*/
+
+
+/* --- Specific Styles for Trips Page (trips.html) --- */
+
+.trips-hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e6f7ff; /* Light blue background for hero */
+    margin-bottom: 40px;
+}
+
+.trips-hero h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 2.8em;
+}
+
+.trips-hero p {
+    color: #555;
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px; /* Constrain width for readability */
+    margin: 0 auto;
+}
+
+.trip-offers {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.trip-offers h2 {
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+
+.trip-grid {
+    display: grid;
+    /* Responsive grid: 2 columns on larger screens, 1 on small */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px; /* Space between trip cards */
+    justify-content: center; /* Center items if they don't fill the row */
+    padding: 0 10px; /* Some padding on sides */
+}
+
+.trip-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+.trip-card img {
+    width: 100%;
+    height: 250px; /* Fixed height for trip images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    display: block;
+}
+
+.trip-card h3 {
+    color: #007bff;
+    font-size: 1.8em;
+    margin: 20px 15px 10px;
+}
+
+.trip-card p {
+    color: #555;
+    font-size: 1em;
+    margin: 5px 15px;
+    flex-grow: 1; /* Allows description to take available space */
+}
+
+.trip-card .duration,
+.trip-card .difficulty {
+    font-weight: bold;
+    color: #444;
+}
+
+.trip-card .button-cta {
+    margin: 20px auto; /* Center button horizontally, space it from content */
+    padding: 12px 25px;
+    font-size: 1em;
+    width: fit-content; /* Make button only as wide as its content */
+}
+
+.call-to-action-bottom {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+.call-to-action-bottom h2 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.call-to-action-bottom p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive adjustments for Trips Page */
+@media (max-width: 768px) {
+    .trips-hero h2 {
+        font-size: 2.2em;
+    }
+    .trips-hero p {
+        font-size: 1em;
+    }
+    .trip-grid {
+        grid-template-columns: 1fr; /* Stack trips on smaller screens */
+        padding: 0 20px;
+    }
+    .trip-card {
+        margin: 0 auto; /* Center single cards */
+        max-width: 400px; /* Constrain max width for single column */
+    }
+    .call-to-action-bottom h2 {
+        font-size: 2em;
+    }
+    .call-to-action-bottom p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .trips-hero h2 {
+        font-size: 1.8em;
+    }
+    .trip-offers h2 {
+        font-size: 1.8em;
+    }
+    .trip-card h3 {
+        font-size: 1.5em;
+    }
+    .call-to-action-bottom h2 {
+        font-size: 1.8em;
+    }
+}
